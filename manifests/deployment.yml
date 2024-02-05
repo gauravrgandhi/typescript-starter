@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gauravrgandhitypescriptstarter 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gauravrgandhitypescriptstarter
+  template:
+    metadata:
+      labels:
+        app: gauravrgandhitypescriptstarter 
+    spec:
+      containers:
+        - name: gauravrgandhitypescriptstarter 
+          image: demoimagereg.azurecr.io/gauravrgandhitypescriptstarter
+          ports:
+          - containerPort: 80
